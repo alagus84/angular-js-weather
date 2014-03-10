@@ -10,7 +10,7 @@
 </head>
 <body ng-app="angularWeather" ng-controller="todaysWeatherController">
  {{todaysWeather.name}}<br />
- {{formattedTime}}<br />
+ {{format_dt(todaysWeather.dt)}}<br />
  {{todaysWeather.weather[0].description}}<br />
  {{todaysWeather.main.temp}}<br />
 

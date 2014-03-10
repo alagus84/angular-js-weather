@@ -29,7 +29,8 @@ angular.module('angularWeather.controllers', []).
 			$scope.todaysWeather = response;
 		});
 
-		function format_dt(dt) {
+		console.log($scope);
+		$scope.format_dt = function(dt) {
 			var date = new Date(dt*1000);
 			// hours part from the timestamp
 			var hours = date.getHours();
@@ -41,7 +42,7 @@ angular.module('angularWeather.controllers', []).
 		}
 		
 		// will display time in 10:30:23 format
-		$scope.formattedTime = format_dt($scope.todaysWeather);
+		//$scope.formattedTime = format_dt($scope.todaysWeather);
 
 	});
 
